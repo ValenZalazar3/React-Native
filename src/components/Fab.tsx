@@ -23,9 +23,7 @@ export const Fab = ({title, onPress, position = 'br'}: Props) => {
           style.fabLocation,
           position === 'bl' ? style.left : style.right,
         ]}
-        onPress={() => {
-          onPress;
-        }}>
+        onPress={() => onPress()}>
         <View style={style.fab}>
           <Text style={style.fabText}>{title}</Text>
         </View>
@@ -42,7 +40,7 @@ export const Fab = ({title, onPress, position = 'br'}: Props) => {
         ]}>
         <TouchableNativeFeedback
           onPress={() => {
-            onPress;
+            onPress();
           }}
           background={TouchableNativeFeedback.Ripple('black', false, 30)}>
           <View style={style.fab}>
